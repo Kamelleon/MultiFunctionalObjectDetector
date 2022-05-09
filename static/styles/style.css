@@ -1,0 +1,91 @@
+html{
+      margin:0px;
+}
+
+body{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color:white;
+  background: rgb(2,0,36);
+  background: linear-gradient(45deg, rgba(2,0,36,1) 0%, rgba(28,47,33,1) 50%, rgba(10,189,87,1) 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+textarea:focus, input:focus{
+    outline: none;
+}
+/* ::-webkit-calendar-picker-indicator {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 24 24"><path fill="%23bbbbbb" d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z"/></svg>');
+} */
+/* .input-container input {
+    border: none;
+    box-sizing: border-box;
+    outline: 0;
+    padding: .75rem;
+    position: relative;
+    width: 100vw;
+} */
+
+/* input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20%;
+    margin-top:35vh;
+    height: 8vh;
+    margin-left: 40vw;
+
+} */
+/* input[type="date"]:in-range::-webkit-datetime-edit-year-field, input[type="date"]:in-range::-webkit-datetime-edit-month-field, input[type="date"]:in-range::-webkit-datetime-edit-day-field, input[type="date"]:in-range::-webkit-datetime-edit-text { 	color: transparent; } */
+input[type="date"]
+{
+    margin-top: 4vh;
+    background: transparent;
+    border: none;
+    color:white;
+    font-size: 4vh;
+    margin-left:auto;
+    margin-right: auto;
+}
+input[type="submit"]{
+  cursor: pointer;
+  margin-top: 7vh;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent;
+  border: 0.2vw solid white;
+  border-radius: 5vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  font-size: 2.5vh;
+  letter-spacing: 0.35vw;
+  color:white;
+  transition: 0.3s;
+}
+hr{
+  width:25%;
+}
+
+@media screen and (min-width: 1200px){
+  input[type="submit"]:hover{
+    background-color: white;
+    color:black;
+  }
+}
+
+/* input[type="submit"]:hover{
+  background-color: black;
+} */
+p{
+  margin-top:25vh;
+  margin-bottom: 2vh;
+  font-size: 5vh;
+}

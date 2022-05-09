@@ -1,0 +1,75 @@
+{% macro entry(ent) %}
+  <tr>
+      {% set icon = ent.guess_icon() %}
+      <td class="icon">
+        <div class="holder">
+          <a href="{{ url_for(endpoint, path=ent.path) }}">
+            {% if icon and "_" in ent.path and (".jpg" in ent.path or ".png" in ent.path) %}
+              <img src="{{ url_for(endpoint, path=ent.path) }}" />
+            
+              <!-- <p>{{ ent.path }}</p> -->
+            {% else %}
+              <img src="{{ icon }}" />
+            {% endif %}
+          {%- if ent.name == ".." -%}
+            <!-- <p style="top:8vh;left:47vw;width:5vw;height:8vh;position:absolute;background-color:transparent;"></p> -->
+          {%- else -%}
+            {{ ent.name }}
+          {%- endif -%}
+          </a>
+        </div>
+      </td>
+      <!-- <td class="modified">
+        <time datetime="{{ ent.modified }}">{{ ent.modified }}</time>
+      </td> -->
+      <!-- <td class="size">
+        {% if ent.size %}
+          {{ ent.size|filesizeformat }}
+        {% else %}
+          -
+        {% endif %}
+      </td> -->
+  </tr>
+{% endmacro %}
+
+{% macro th(key, label, colspan=1) %}
+  <th class="{{ key }}" colspan="{{ colspan }}">
+    {%- if sort_by == key and order > 0 -%}
+      <a href="?sort_by={{ key }}&amp;order=desc">{{ label }}</a>
+    {%- else -%}
+      <a href="?sort_by={{ key }}">{{ label }}</a>
+    {%- endif -%}
+    {%- if sort_by == key -%}
+      {%- if order > 0 -%}
+        <img src="{{ url_for('__autoindex__.static', filename='asc.gif') }}" alt="ASC" />
+      {%- elif order < 0 -%}
+        <img src="{{ url_for('__autoindex__.static', filename='desc.gif') }}" alt="DESC" />
+      {%- endif -%}
+    {%- endif -%}
+  </th>
+{% endmacro %}
+
+{% macro thead() %}
+  <tr>
+    <!-- {{ th("name", "Nazwa pliku", 2) }} -->
+    <!-- {{ th("modified", "Ostatnio zmodyfikowany") }} -->
+    <!-- {{ th("size", "Rozmiar") }} -->
+  </tr>
+{% endmacro %}
+
+{% macro breadcrumb(ent) %}
+  {% set parent = ent.parent %}
+  {% if parent %}
+    {{ breadcrumb(parent) }}
+    <span class="sep">&raquo;</span>
+  {% endif %}
+  <a href="{{ url_for(endpoint, path=ent.path) }}">
+    {% set icon = ent.guess_icon() %}
+    {% if icon %}
+      <img src="{{ icon }}" />
+    {% endif %}
+    {% if not ent.is_root() %}
+      {{ ent.name }}
+    {% endif %}
+  </a>
+{% endmacro %}

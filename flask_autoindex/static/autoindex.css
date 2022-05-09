@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body, table {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(35,87,43,1) 75%, rgba(4,144,64,1) 100%);
+  background-repeat: no-repeat;
+   background-attachment: fixed;
+   color:white;
+}
+a{
+  color:white;
+}
+a:link, a:visited a:hover {
+  text-decoration: none;
+}
+/* a:link {
+  color: #36c;
+}
+a:visited {
+  color: #333;
+} */
+
+@media screen and (min-width: 1200px){
+  .holder{
+    width:50vw;
+    text-align: left;
+    margin-left: 40vw;
+    margin-right: 0px;
+  }
+}
+
+#readme {
+  padding: 10px 26px;
+  border-bottom: 1px solid #eee;
+  font-size: 12px;
+  color: white;
+  /* background: #fafafa; */
+}
+#readme pre {
+  line-height: 1.2;
+}
+#readme p, #readme ul, #readme ol,
+#readme h1, #readme h2, #readme h3, #readme h4, #readme h5, #readme h6 {
+  display: block;
+  margin-bottom: 1em;
+}
+#readme h1, #readme h2, #readme h3, #readme h4, #readme h5, #readme h6 {
+  padding: 0;
+  color: white;
+  text-align: left;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+#readme pre code {
+  display: block;
+  padding: 9px;
+  margin: 0 -10px 1em;
+  border: 1px solid #cde;
+  color: white;
+  /* background: #fff; */
+}
+#readme li {
+  margin-left: 2em;
+}
+#readme blockquote {
+  padding: 9px;
+  margin: 0 -10px 1em;
+  border-left: 1px solid #cde;
+}
+#readme blockquote :last-child {
+  margin-bottom: 0;
+}
+#readme h1 { font-size: 1.5em; }
+#readme h2 { font-size: 1.4em; }
+#readme h3 { font-size: 1.3em; }
+#readme h4 { font-size: 1.2em; }
+#readme h5 { font-size: 1.1em; }
+#readme h6 { font-size: 1em; }
+
+.breadcrumb {
+  padding: 0;
+  background-color: black;
+
+}
+.breadcrumb a {
+  margin: 0;
+  color: white;
+  font-size: 2vh;
+}
+.breadcrumb .sep {
+  color: #bbb;
+}
+.breadcrumb img {
+  vertical-align: middle;
+}
+.breadcrumb h1 {
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 1);
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 1);
+  font-size: 2vh;
+  font-weight: normal;
+  padding: 0.2vh;
+  /* background: #f4f4f4; */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  /* background: #fff; */
+}
+thead {
+  color:white;
+}
+/* tr{
+  border:1px solid white;
+} */
+th {
+  top:0px;
+  position: sticky;
+  font-size: 1vh;
+  height: 1vh;
+  
+  /* background: #ddd; */
+  /* background: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, #ddd),
+    color-stop(1, #eee)
+  ); */
+  /* background: -moz-linear-gradient(
+    center bottom,
+    #ddd 0%,
+    #eee 100%
+  ); */
+}
+th a:link, th a:visited {
+  margin: 0 10px;
+  color: white;
+}
+th img {
+  position: absolute;
+  margin-left: -6px;
+}
+
+/* hr {
+  margin: 0;
+  border: none;
+} */
+
+td {
+  padding: 1.3vh;
+  font-size: 11px;
+  color: white;
+}
+@media screen and (min-width: 1200px){
+  td {
+    padding: 0.6vh;
+    font-size: 11px;
+    color: white;
+  }
+}
+td a {
+  margin-right: 0.6vw;
+  font-size: 3.2vh;
+  text-align: center;
+}
+td.modified {
+  text-align: center;
+}
+td.size {
+  text-align: center;
+}
+tbody tr:first-child img{
+  width:15%;
+  height:25%;
+  margin-top: 2vh;
+  vertical-align: middle
+}
+@media screen and (min-width: 1200px){
+  tbody tr:first-child img{
+    width:10%;
+    height:20%;
+    margin-top: 2vh;
+    vertical-align: middle
+  }
+}
+
+img{
+  width:5%;
+  height:20%;
+  vertical-align: middle
+}
+tbody tr img{
+  width:25%;
+  height:40%;
+  vertical-align: middle
+}
+.icon, .name {
+  text-align: center;
+  border: none;
+}
+.icon {
+  width: 0.2vw;
+  padding-right: 0;
+}
+.modified {
+  width: 120px;
+}
+.size {
+  width: 60px;
+}
+
+address {
+  padding: 5px;
+  font-size: 11px;
+  color:white;
+  text-align: right;
+}

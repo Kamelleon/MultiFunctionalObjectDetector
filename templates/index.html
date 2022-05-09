@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Detekcje</title>
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <div class="container">
+    <p>Wybierz dzień z kalendarza</p>
+    <hr>
+    <form method="POST" action="check_cameras">
+      <input type="date" id="calendar" name="calendar">
+      <br>
+      <input type="submit" value="SPRAWDŹ" onclick="checkIfDateWasSelected()">
+    </form>
+  </div>
+
+  <script>
+    function setDateToCurrent()
+    {
+      Date.prototype.toDateInputValue = (function() {
+        var local = new Date(this);
+        local.setMinutes(this.getMinutes() - this.getTimezoneOffset());
+        return local.toJSON().slice(0,10);
+      });
+      document.getElementById('calendar').value = new Date().toDateInputValue();
+    }
+
+    function checkIfDateWasSelected()
+    {
+      var date_picker = document.getElementById("calendar");
+      if(date_picker.value == "")
+      {
+        alert("Nie wybrano dnia z kalendarza. Spróbuj ponownie.");
+      }
+    }
+
+    setDateToCurrent()
+
+  </script>
+</body>
+</html>
