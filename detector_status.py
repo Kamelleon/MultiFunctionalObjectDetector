@@ -40,14 +40,16 @@ class Database:
                         query = "update activity set status = 0 where id = {}".format(item["id"])
                         cur.execute(query)
                         con.commit()
+                        con.close()
                         return False
                 else:
+                    con.close()
                     return True
 
 
 if __name__ == "__main__":
-    telegram_bot = TelegramBot("tokenid", "-groupid")
-    database = Database('111.111.111.111','user','pass','db_name')
+    telegram_bot = TelegramBot("5285793586:AAFoa-vSUkriHq1a3xgATPc-LMeRPteJ47w", "-618635515")
+    database = Database('176.107.133.205','ubnt','ubnt2022!','serwer_kamer')
     while True:
         detector_online = database.check_statuses_of_detectors()
         if not detector_online:

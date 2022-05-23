@@ -1,0 +1,25 @@
+# rtsp_ip link layout:
+# Main stream: rtsp://user:password@ip_address:554
+
+cameras:
+  ogrodek:
+    rtsp_ip: "rtsp://user:password@ip_addr"
+    type: "h265"
+
+supla:
+  action_url: "https://svr65.supla.org/api/"
+  status_url: "https://svr65.supla.org/api/state"
+
+mysql:
+  host: "1.1.1.1.1.1"
+  user: "user"
+  password: "password"
+  database_name: "database_name"
+
+telegram_bot:
+  token: "token"
+  group_id: "group_id"
+
+detector:
+  confidence: "0.7" # Minimum probability of detection
+
