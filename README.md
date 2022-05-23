@@ -7,7 +7,7 @@ Object detector based on YOLOv5 that save pictures locally and gives access to t
 ![person_detected](https://github.com/Kamelleon/ObjectDetector/blob/main/preview_screens/detect%20(1).jpg)
 
 
-- Telegram messages system<br />
+- Telegram messages system<br /><br />
 ![telegram_message](https://github.com/Kamelleon/ObjectDetector/blob/main/preview_screens/detect%20(1).png)
 
 
