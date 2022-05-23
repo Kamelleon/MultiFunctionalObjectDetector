@@ -1,5 +1,5 @@
 # ObjectDetector
-Object detector based on YOLOv5 that save pictures locally and gives access to them by flask website.
+Multi-functional object detector based on YOLOv5 that save pictures locally and gives access to them by flask website.
 
 # App possibilities
 - Performing detections from camera frames using G-streamer and RTSP IP link
